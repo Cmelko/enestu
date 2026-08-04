@@ -1,0 +1,42 @@
+# Enestu — Cloudflare Pages + Functions
+name = "enestu"
+compatibility_date = "2025-06-01"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "enestu-leads"
+database_id = "00000000-0000-0000-0000-000000000001"
+preview_database_id = "local-enestu-leads"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "00000000-0000-0000-0000-000000000002"
+preview_id = "local-enestu-rate"
+
+# Secrets (set via `wrangler pages secret put`):
+# RESEND_API_KEY
+# STRIPE_SECRET_KEY
+# STRIPE_WEBHOOK_SECRET
+#
+# Vars (wrangler pages project or dashboard):
+# CONTACT_TO=ahoj@enestu.cz
+# PARTNER_TO=partner@enestu.cz
+# FROM_EMAIL=Enestu <noreply@enestu.cz>
+# PUBLIC_SITE_URL=https://enestu.cz
+# STRIPE_PRICE_STARTER_MONTHLY=
+# STRIPE_PRICE_STARTER_YEARLY=
+# STRIPE_PRICE_STANDARD_MONTHLY=
+# STRIPE_PRICE_STANDARD_YEARLY=
+# STRIPE_PRICE_PREMIUM_MONTHLY=
+# STRIPE_PRICE_PREMIUM_YEARLY=
+# STRIPE_TRIAL_DAYS=180
+# ALLOWED_ORIGIN=https://enestu.cz
+
+[vars]
+CONTACT_TO = "ahoj@enestu.cz"
+PARTNER_TO = "partner@enestu.cz"
+FROM_EMAIL = "Enestu <onboarding@resend.dev>"
+PUBLIC_SITE_URL = "http://127.0.0.1:8788"
+ALLOWED_ORIGIN = "*"
+STRIPE_TRIAL_DAYS = "180"

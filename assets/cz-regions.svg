@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" role="img" aria-label="Mapa krajo eské republiky">
+  <!-- Simplified clickable kraj map (schematic, brand-styled) -->
+  <path data-region="karlovarsky" d="M28,95 L78,70 L108,95 L95,140 L48,145 Z"/>
+  <path data-region="ustecky" d="M108,55 L175,40 L210,75 L175,115 L108,95 Z"/>
+  <path data-region="liberecky" d="M210,40 L275,35 L290,85 L245,105 L210,75 Z"/>
+  <path data-region="kralovehradecky" d="M275,35 L345,50 L350,105 L300,115 L290,85 Z"/>
+  <path data-region="pardubicky" d="M300,115 L350,105 L370,155 L320,170 L295,140 Z"/>
+  <path data-region="plzensky" d="M48,145 L95,140 L120,185 L95,230 L40,210 Z"/>
+  <path data-region="stredocesky" d="M120,115 L210,95 L245,105 L260,155 L210,185 L140,175 L120,145 Z"/>
+  <path data-region="praha" d="M188,125 L218,118 L230,140 L210,155 L185,145 Z"/>
+  <path data-region="jihocesky" d="M95,230 L140,175 L210,185 L230,245 L160,275 L100,255 Z"/>
+  <path data-region="vysocina" d="M210,185 L260,155 L320,170 L330,220 L270,245 L230,245 Z"/>
+  <path data-region="jihomoravsky" d="M270,245 L330,220 L380,240 L370,295 L300,300 L260,275 Z"/>
+  <path data-region="olomoucky" d="M350,105 L410,120 L420,175 L370,190 L350,155 Z"/>
+  <path data-region="zlinsky" d="M370,190 L420,175 L455,210 L430,250 L380,240 Z"/>
+  <path data-region="moravskoslezsky" d="M410,95 L500,90 L520,150 L470,180 L420,160 L410,120 Z"/>
+</svg>

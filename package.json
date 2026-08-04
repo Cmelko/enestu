@@ -1,0 +1,16 @@
+{
+  "name": "enestu",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Enestu marketing site — Cloudflare Pages + Functions",
+  "scripts": {
+    "dev": "wrangler pages dev . --port 8788 --ip 127.0.0.1",
+    "deploy": "wrangler pages deploy . --project-name=enestu",
+    "db:create": "wrangler d1 create enestu-leads",
+    "db:migrate:local": "wrangler d1 execute enestu-leads --local --file=schema.sql",
+    "db:migrate": "wrangler d1 execute enestu-leads --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.20.0"
+  }
+}

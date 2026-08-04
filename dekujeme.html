@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Děkujeme — Enestu</title>
+  <meta name="description" content="Registrace nebo platba proběhla úspěšně." />
+  <link rel="icon" href="assets/enestu-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Spouštíme v Česku. Brzy také na Slovensku a v dalších zemích střední Evropy.</div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
+      <div class="nav-actions">
+        <a class="btn btn--ghost" href="#" data-portal>Přihlásit se</a>
+        <a class="btn btn--primary" href="index.html">Domů</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="min-height:60vh;display:flex;align-items:center">
+      <div class="container" style="max-width:640px;text-align:center">
+        <div class="form-alert form-alert--success" style="display:inline-flex;margin-bottom:1.5rem;text-align:left">
+          <strong>Hotovo</strong>
+          <span id="thanks-msg">Děkujeme. Účet / předplatné je připravené.</span>
+        </div>
+        <h1 class="section-title">Vítejte v Enestu</h1>
+        <p class="section-lead" style="margin-inline:auto" id="thanks-lead">
+          Poslali jsme vám potvrzení e-mailem. Správu předplatného vyřídíte přes zákaznický portál Stripe.
+        </p>
+        <div class="btn-row" style="justify-content:center;margin-top:1.75rem">
+          <a class="btn btn--primary" href="#" data-portal>Spravovat předplatné</a>
+          <a class="btn btn--ghost" href="jak-to-funguje.html">Jak to funguje</a>
+        </div>
+        <p style="margin-top:2rem;font-size:.85rem;color:var(--muted)" id="thanks-meta"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border:0;padding-top:0;justify-content:center">
+        <span>© 2026 Enestu</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/forms.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const demo = params.get("demo");
+      const plan = params.get("plan");
+      const billing = params.get("billing");
+      const session = params.get("session_id");
+      const msg = document.getElementById("thanks-msg");
+      const lead = document.getElementById("thanks-lead");
+      const meta = document.getElementById("thanks-meta");
+      if (demo) {
+        msg.textContent = "Demo režim — Stripe ještě není napojený na produkční klíče.";
+        lead.textContent =
+          "Po nastavení STRIPE_SECRET_KEY a price IDs vás Checkout přesměruje sem automaticky.";
+      }
+      if (plan) {
+        meta.textContent = `Tarif: ${plan}${billing ? " · " + billing : ""}${session ? " · session " + session.slice(0, 18) + "…" : ""}`;
+      } else if (session) {
+        meta.textContent = `Stripe session: ${session.slice(0, 24)}…`;
+      }
+    })();
+  </script>
+</body>
+</html>

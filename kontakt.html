@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt — Enestu</title>
+  <meta name="description" content="Ozvěte se Enestu — obvykle odpovídáme do jednoho pracovního dne." />
+  <link rel="icon" href="assets/enestu-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Spouštíme v Česku. Brzy také na Slovensku a v dalších zemích střední Evropy.</div>
+  <header class="site-header">
+    <div class="container nav" id="nav">
+      <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
+            <nav class="nav-links" aria-label="Hlavní navigace">
+        <a href="index.html">Domov</a>
+        <a href="jak-to-funguje.html">Jak to funguje</a>
+        <a href="cenik.html">Ceník</a>
+        <a href="bezpecnost.html">Bezpečnost</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a class="nav-muted" href="pro-remeslniky.html">Pro řemeslníky</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
+        <a class="btn btn--outline-nav" href="cenik.html">Vyzkoušet zdarma</a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow eyebrow--soft">Kontakt</span>
+          <h1 class="section-title" style="margin-top:1rem">Ozvěte se nám</h1>
+          <p class="section-lead">Rádi odpovíme na vaše otázky — obvykle do jednoho pracovního dne.</p>
+          <div class="contact-meta" style="margin-top:2rem">
+            <div class="card card--flat">
+              <h3>E-mail</h3>
+              <p><a href="mailto:ahoj@enestu.cz">ahoj@enestu.cz</a></p>
+            </div>
+            <div class="card card--flat">
+              <h3>Region</h3>
+              <p>Praha, Česko</p>
+            </div>
+            <div class="card card--flat">
+              <h3>Doba odpovědi</h3>
+              <p>Obvykle do 1 pracovního dne<br /><span style="font-weight:500;color:var(--muted);font-size:.9rem">Po–Pá, 9:00–17:00</span></p>
+            </div>
+          </div>
+          <p style="margin-top:1.5rem;color:var(--muted);font-size:.95rem">Máte obecný dotaz? Podívejte se nejdřív na <a class="btn btn--text" href="index.html#faq">časté otázky (FAQ)</a>.</p>
+        </div>
+        <article class="card">
+          <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:1rem">Napište nám</h2>
+          <form class="form" data-form="contact" novalidate>
+            <div class="hp-field" aria-hidden="true">
+              <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+            <div class="field">
+              <label for="name">Jméno</label>
+              <input id="name" name="name" type="text" placeholder="Jan Novák" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="vas@email.cz" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="subject">Předmět</label>
+              <input id="subject" name="subject" type="text" placeholder="Dotaz k Enestu" required />
+            </div>
+            <div class="field">
+              <label for="message">Zpráva</label>
+              <textarea id="message" name="message" placeholder="Napište, s čím vám můžeme pomoct…" required></textarea>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required />
+              <span>Souhlasím se zpracováním údajů dle <a href="ochrana-udaju.html" style="color:var(--blue)">Ochrany osobních údajů</a>.</span>
+            </label>
+            <button class="btn btn--primary" type="submit">Odeslat zprávu</button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a><p>Digitální domov pro majitele, kteří bydlí daleko.</p></div>
+        <div class="footer-col"><h4>Produkt</h4><a href="jak-to-funguje.html">Jak to funguje</a><a href="cenik.html">Ceník</a><a href="bezpecnost.html">Bezpečnost</a></div>
+        <div class="footer-col"><h4>Partneři</h4><a href="pro-remeslniky.html">Pro řemeslníky</a><a href="kontakt.html">Kontakt</a></div>
+        <div class="footer-col"><h4>Právní</h4><a href="ochrana-udaju.html">Ochrana osobních údajů</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Enestu</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

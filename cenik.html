@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ceník — Enestu</title>
+  <meta name="description" content="Jednoduchý ceník Enestu bez překvapení. Začněte zdarma, placené tarify od €5 měsíčně." />
+  <link rel="icon" href="assets/enestu-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Spouštíme v Česku. Brzy také na Slovensku a v dalších zemích střední Evropy.</div>
+  <header class="site-header">
+    <div class="container nav" id="nav">
+      <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
+            <nav class="nav-links" aria-label="Hlavní navigace">
+        <a href="index.html">Domov</a>
+        <a href="jak-to-funguje.html">Jak to funguje</a>
+        <a href="cenik.html" class="is-active">Ceník</a>
+        <a href="bezpecnost.html">Bezpečnost</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a class="nav-muted" href="pro-remeslniky.html">Pro řemeslníky</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
+        <a class="btn btn--outline-nav" href="cenik.html">Vyzkoušet zdarma</a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--dark" data-billing>
+      <div class="container" style="text-align:center;max-width:760px;margin-inline:auto">
+        <span class="eyebrow eyebrow--light">Ceník</span>
+        <h1 class="section-title" style="margin-top:1rem">Jednoduchý ceník bez překvapení</h1>
+        <p class="lead" style="margin-top:1rem">Začněte zdarma a v klidu si dům zdigitalizujte. Za opravy platíte jen tehdy, když je objednáte — a vždy víte cenu předem.</p>
+        <div class="promo-pill">Prvních 6 měsíců zdarma. Placené tarify od €5 / měsíc za nemovitost — bez vázací doby.</div>
+        <ul class="trust" style="justify-content:center">
+          <li><span class="check">✓</span> Bez karty na začátek</li>
+          <li><span class="check">✓</span> Platíte až po dokončené opravě</li>
+          <li><span class="check">✓</span> GDPR &amp; data v EU</li>
+        </ul>
+        <div class="billing-toggle" style="margin-inline:auto">
+          <button type="button" class="is-active" data-billing="monthly">Měsíčně</button>
+          <button type="button" data-billing="yearly">Ročně −20 %</button>
+        </div>
+        <div class="pricing-grid" style="text-align:left;margin-top:0.5rem">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <div class="amount" data-price-monthly="0">€0<small>/měs.</small></div>
+            <p style="color:rgba(255,255,255,.65);font-size:.9rem">6 měsíců zdarma · výjezd €75</p>
+            <ul>
+              <li><span class="mark">✓</span> Pas + Trezor</li>
+              <li><span class="mark">✓</span> Úschova plateb</li>
+              <li><span class="mark">—</span> Concierge</li>
+              <li><span class="mark">—</span> Portfolio nemovitostí</li>
+            </ul>
+            <a class="btn btn--ghost-light" href="#" data-checkout="starter">Založit domov zdarma →</a>
+          </article>
+          <article class="price-card price-card--featured">
+            <span class="tag">Nejoblíbenější</span>
+            <h3>Standard</h3>
+            <div class="amount" data-price-monthly="5">€5<small>/měs.</small></div>
+            <p style="color:var(--muted);font-size:.9rem">Za nemovitost · výjezd €50</p>
+            <ul>
+              <li><span class="mark">✓</span> Vše ze Starteru</li>
+              <li><span class="mark">✓</span> Průběžné skóre</li>
+              <li><span class="mark">✓</span> +€5 za další nemovitost</li>
+              <li><span class="mark">—</span> Concierge</li>
+            </ul>
+            <a class="btn btn--primary" href="#" data-checkout="standard">Založit domov zdarma →</a>
+          </article>
+          <article class="price-card">
+            <h3>Premium VIP</h3>
+            <div class="amount" data-price-monthly="18">€18<small>/měs.</small></div>
+            <p style="color:rgba(255,255,255,.65);font-size:.9rem">Concierge · výjezdy €0</p>
+            <ul>
+              <li><span class="mark">✓</span> Vše ze Standardu</li>
+              <li><span class="mark">✓</span> Concierge</li>
+              <li><span class="mark">✓</span> Automatické skóre</li>
+              <li><span class="mark">✓</span> Výhody hypotéka / pojištění</li>
+            </ul>
+            <a class="btn btn--ghost-light" href="#" data-checkout="premium">Založit domov zdarma →</a>
+          </article>
+        </div>
+        <p class="price-note" style="margin-inline:auto;text-align:left">Předplatné je účtováno za každou nemovitost. K ceně práce se přičítá přirážka 20 % a výjezdní poplatek dle tarifu. Řemeslník dostává 100 % své ceny. Ceny v EUR, DPH před spuštěním.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow eyebrow--soft">Pomůžeme vybrat</span>
+          <h2 class="section-title" style="margin-top:1rem">Který tarif je pro mě?</h2>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="card"><h3>Starter</h3><p>„Chci si nejdřív dům zdigitalizovat a vyzkoušet opravy bez závazku.“</p></article>
+          <article class="card card--yellow"><h3>Standard</h3><p>„Mám jednu nebo více nemovitostí a chci průběžný přehled stavu i levnější výjezdy.“</p></article>
+          <article class="card"><h3>Premium VIP</h3><p>„Chci concierge, portfolio a minimum starostí — včetně výhod u hypotéky a pojištění.“</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow--light">Srovnání tarifů</span>
+          <h2 class="section-title" style="margin-top:1rem">Co je v každém tarifu</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th>Funkce</th><th>Starter</th><th>Standard</th><th>Premium VIP</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Měsíční předplatné</td><td>€0</td><td>€5</td><td>€18</td></tr>
+              <tr><td>Concierge</td><td>—</td><td>—</td><td>✓</td></tr>
+              <tr><td>Počet nemovitostí</td><td>1</td><td>+€5 za každou</td><td>Portfolio</td></tr>
+              <tr><td>Výjezdní poplatek</td><td>€75</td><td>€50</td><td>€0</td></tr>
+              <tr><td>Přirážka</td><td>20 %</td><td>20 %</td><td>20 %</td></tr>
+              <tr><td>Platba v úschově</td><td>✓</td><td>✓</td><td>✓</td></tr>
+              <tr><td>Skóre stavu</td><td>Provizorní (6 měs.)</td><td>Průběžné</td><td>Automatické</td></tr>
+              <tr><td>Výhody hypotéka / pojištění</td><td>—</td><td>—</td><td>✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow--soft">Jak funguje cena opravy</span>
+          <h2 class="section-title" style="margin-top:1rem">Transparentní cena, žádná skrytá čísla</h2>
+          <p class="section-lead">Cenu schvalujete předem. K ceně práce přičítáme 20 % a výjezdní poplatek. Řemeslník vždy dostane 100 % své ceny.</p>
+        </div>
+        <div class="card-grid card-grid--2">
+          <article class="card card--yellow"><div class="step__num">01</div><h3 style="margin-top:.75rem">Schválíte cenu předem</h3><p>Žádné dohadování po telefonu ani zálohy naslepo.</p></article>
+          <article class="card"><div class="step__num">02</div><h3 style="margin-top:.75rem">Poplatky vidíte jasně</h3><p>Přirážka i výjezd jsou součástí nabídky — před potvrzením.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow--light">Simulátor úspor</span>
+          <h2 class="section-title" style="margin-top:1rem">Kolik vám Enestu ušetří</h2>
+        </div>
+        <div class="simulator">
+          <div class="card">
+            <div class="slider-field">
+              <label><span>Cena práce</span><span id="sim-work-val">€1200</span></label>
+              <input id="sim-work" type="range" min="100" max="5000" step="50" value="1200" />
+            </div>
+            <div class="slider-field">
+              <label><span>Čas hledání řemeslníka</span><span id="sim-hours-val">6 hod</span></label>
+              <input id="sim-hours" type="range" min="0" max="20" step="1" value="6" />
+            </div>
+          </div>
+          <div class="sim-result">
+            <div class="row"><span>Tradiční platforma</span><strong id="sim-traditional">€0</strong></div>
+            <div class="row"><span>S Enestu</span><strong id="sim-enestu">€0</strong></div>
+            <div class="row"><span>Úspora</span><strong id="sim-save">€0</strong></div>
+            <a class="btn btn--primary" style="width:100%;margin-top:1rem" href="#" data-checkout="standard">Založit domov zdarma →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container" style="max-width:760px">
+        <div class="section-head section-head--center">
+          <span class="eyebrow eyebrow--soft">FAQ</span>
+          <h2 class="section-title" style="margin-top:1rem">Ceník — co nejčastěji řešíte</h2>
+        </div>
+        <div class="faq">
+          <details open><summary>Jak funguje platba v úschově?</summary><p>Peníze držíme do potvrzení práce. Teprve potom jdou partnerovi.</p></details>
+          <details><summary>Funguje to, i když nemluvím dobře česky?</summary><p>Ano — zadání i přehledy jsou srozumitelné i na dálku.</p></details>
+          <details><summary>Kolik to stojí, než to vyzkouším?</summary><p>6 měsíců zdarma, bez karty na začátek.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>Založte domov za pár minut</h2>
+        <form class="email-form" data-form="waitlist" data-source="cenik-cta">
+          <div class="hp-field" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+          <input type="email" name="email" placeholder="vas@email.cz" required />
+          <button class="btn btn--primary" type="submit">Založit domov</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a><p>Digitální domov pro majitele, kteří bydlí daleko.</p></div>
+        <div class="footer-col"><h4>Produkt</h4><a href="jak-to-funguje.html">Jak to funguje</a><a href="cenik.html">Ceník</a><a href="bezpecnost.html">Bezpečnost</a></div>
+        <div class="footer-col"><h4>Partneři</h4><a href="pro-remeslniky.html">Pro řemeslníky</a><a href="kontakt.html">Kontakt</a></div>
+        <div class="footer-col"><h4>Právní</h4><a href="ochrana-udaju.html">Ochrana osobních údajů</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Enestu</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Design working copies (keep design/ mockups tracked)
+design/_tmp/
+
+# Local export / QA junk
+assets/mock/_qa/
+assets/mock/ov-*.jpg
+assets/mock/qa-*.jpg
+scripts/__pycache__/
+
+# Local sqlite
+*.sqlite
+*.sqlite-*

@@ -1,0 +1,86 @@
+{
+  "praha": {
+    "label": "Praha",
+    "slots": 5,
+    "taken": 2,
+    "trades": ["Instalatérství", "Elektro", "Topení"]
+  },
+  "stredocesky": {
+    "label": "Středočeský kraj",
+    "slots": 5,
+    "taken": 1,
+    "trades": ["Instalatérství", "Elektro"]
+  },
+  "jihocesky": {
+    "label": "Jihočeský kraj",
+    "slots": 3,
+    "taken": 3,
+    "trades": ["Instalatérství"]
+  },
+  "plzensky": {
+    "label": "Plzeňský kraj",
+    "slots": 4,
+    "taken": 1,
+    "trades": ["Elektro", "Topení"]
+  },
+  "karlovarsky": {
+    "label": "Karlovarský kraj",
+    "slots": 2,
+    "taken": 0,
+    "trades": ["Instalatérství"]
+  },
+  "ustecky": {
+    "label": "Ústecký kraj",
+    "slots": 3,
+    "taken": 1,
+    "trades": ["Elektro"]
+  },
+  "liberecky": {
+    "label": "Liberecký kraj",
+    "slots": 3,
+    "taken": 0,
+    "trades": ["Instalatérství", "Elektro"]
+  },
+  "kralovehradecky": {
+    "label": "Královéhradecký kraj",
+    "slots": 3,
+    "taken": 2,
+    "trades": ["Topení"]
+  },
+  "pardubicky": {
+    "label": "Pardubický kraj",
+    "slots": 3,
+    "taken": 1,
+    "trades": ["Instalatérství"]
+  },
+  "vysocina": {
+    "label": "Kraj Vysočina",
+    "slots": 3,
+    "taken": 0,
+    "trades": ["Elektro", "Instalatérství"]
+  },
+  "jihomoravsky": {
+    "label": "Jihomoravský kraj",
+    "slots": 5,
+    "taken": 3,
+    "trades": ["Instalatérství", "Elektro", "Topení"]
+  },
+  "olomoucky": {
+    "label": "Olomoucký kraj",
+    "slots": 3,
+    "taken": 1,
+    "trades": ["Instalatérství"]
+  },
+  "zlinsky": {
+    "label": "Zlínský kraj",
+    "slots": 3,
+    "taken": 2,
+    "trades": ["Elektro"]
+  },
+  "moravskoslezsky": {
+    "label": "Moravskoslezský kraj",
+    "slots": 4,
+    "taken": 2,
+    "trades": ["Instalatérství", "Topení"]
+  }
+}
