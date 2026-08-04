@@ -1,15 +1,57 @@
-/* Enestu — page interactions (tabs, simulators, services strip) */
+/* Enestu — page interactions (nav, reveals, tabs, simulators) */
 (function () {
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
+  const header = document.querySelector(".site-header");
+
+  const setNavOpen = (open) => {
+    if (!nav || !toggle) return;
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("nav-locked", open);
+  };
+
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      nav.classList.toggle("is-open");
-      toggle.setAttribute(
-        "aria-expanded",
-        nav.classList.contains("is-open") ? "true" : "false"
-      );
+      setNavOpen(!nav.classList.contains("is-open"));
     });
+
+    nav.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => setNavOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setNavOpen(false);
+    });
+  }
+
+  if (header) {
+    const onScroll = () => {
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll(".reveal");
+  if (reveals.length) {
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-in");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+      );
+      reveals.forEach((el) => io.observe(el));
+    } else {
+      reveals.forEach((el) => el.classList.add("is-in"));
+    }
   }
 
   document.querySelectorAll("[data-tabs]").forEach((root) => {
