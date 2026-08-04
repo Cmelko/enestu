@@ -6,7 +6,9 @@ Homepage vizuálně sedí na `design/homepage.png` (sekcie ako rezy z predlohy +
 
 ## Prototyp online
 
-Po pushnutí na GitHub zapni **Pages** (Settings → Pages → Deploy from branch `main` / root).  
+**Live:** https://cmelko.github.io/enestu/  
+**Repo:** https://github.com/Cmelko/enestu  
+
 Lokálne: `npm run dev` → http://127.0.0.1:8788
 
 ## Lokální vývoj
