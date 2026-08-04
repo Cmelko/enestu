@@ -13,7 +13,11 @@
   <header class="site-header">
     <div class="container nav" id="nav">
       <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
-            <nav class="nav-links" aria-label="Hlavní navigace">
+            <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav-links" aria-label="Hlavní navigace">
         <a href="index.html">Domov</a>
         <a href="jak-to-funguje.html" class="is-active">Jak to funguje</a>
         <a href="cenik.html">Ceník</a>
@@ -21,12 +25,10 @@
         <span class="nav-sep" aria-hidden="true"></span>
         <a class="nav-muted" href="pro-remeslniky.html">Pro řemeslníky</a>
       </nav>
-      <div class="nav-actions">
-        <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
+        <div class="nav-actions">
+          <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
         <a class="btn btn--outline-nav" href="cenik.html">Vyzkoušet zdarma</a>
-        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        </div>
       </div>
     </div>
   </header>

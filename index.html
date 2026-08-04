@@ -18,20 +18,22 @@
         <img src="assets/enestu-icon.svg" alt="" width="44" height="54" />
         ENESTU
       </a>
-      <nav class="nav-links" aria-label="Hlavní navigace">
-        <a class="is-active" href="index.html">Domov</a>
-        <a href="jak-to-funguje.html">Jak to funguje</a>
-        <a href="cenik.html">Ceník</a>
-        <a href="bezpecnost.html">Bezpečnost</a>
-        <span class="nav-sep" aria-hidden="true"></span>
-        <a class="nav-muted" href="pro-remeslniky.html">Pro řemeslníky</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
-        <a class="btn btn--outline-nav" href="cenik.html">Vyzkoušet zdarma</a>
-        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav-links" aria-label="Hlavní navigace">
+          <a class="is-active" href="index.html">Domov</a>
+          <a href="jak-to-funguje.html">Jak to funguje</a>
+          <a href="cenik.html">Ceník</a>
+          <a href="bezpecnost.html">Bezpečnost</a>
+          <span class="nav-sep" aria-hidden="true"></span>
+          <a class="nav-muted" href="pro-remeslniky.html">Pro řemeslníky</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
+          <a class="btn btn--outline-nav" href="cenik.html">Vyzkoušet zdarma</a>
+        </div>
       </div>
     </div>
   </header>

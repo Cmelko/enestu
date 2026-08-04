@@ -4,11 +4,20 @@
   const toggle = document.querySelector(".nav-toggle");
   const header = document.querySelector(".site-header");
 
+  let backdrop = document.querySelector(".nav-backdrop");
+  if (!backdrop) {
+    backdrop = document.createElement("div");
+    backdrop.className = "nav-backdrop";
+    backdrop.hidden = true;
+    document.body.appendChild(backdrop);
+  }
+
   const setNavOpen = (open) => {
     if (!nav || !toggle) return;
     nav.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     document.body.classList.toggle("nav-locked", open);
+    backdrop.hidden = !open;
   };
 
   if (toggle && nav) {
@@ -16,13 +25,23 @@
       setNavOpen(!nav.classList.contains("is-open"));
     });
 
-    nav.querySelectorAll(".nav-links a").forEach((link) => {
+    nav.querySelectorAll(".nav-drawer a, .nav-links a, .nav-actions a").forEach((link) => {
       link.addEventListener("click", () => setNavOpen(false));
     });
+
+    backdrop.addEventListener("click", () => setNavOpen(false));
 
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") setNavOpen(false);
     });
+
+    window.addEventListener(
+      "resize",
+      () => {
+        if (window.innerWidth > 960) setNavOpen(false);
+      },
+      { passive: true }
+    );
   }
 
   if (header) {
@@ -33,7 +52,6 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  // Scroll reveal
   const reveals = document.querySelectorAll(".reveal");
   if (reveals.length) {
     if ("IntersectionObserver" in window) {
@@ -46,7 +64,7 @@
             }
           });
         },
-        { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+        { threshold: 0.1, rootMargin: "0px 0px -4% 0px" }
       );
       reveals.forEach((el) => io.observe(el));
     } else {
@@ -54,14 +72,10 @@
     }
   }
 
-  // Demo buttons — clickable, nowhere
   document.querySelectorAll(".js-noop").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-    });
+    el.addEventListener("click", (e) => e.preventDefault());
   });
 
-  // Feature tabs
   document.querySelectorAll("[data-feature-tabs]").forEach((root) => {
     const tabs = root.querySelectorAll(".feat-tab");
     const panels = root.querySelectorAll("[data-feat-panel]");
@@ -81,7 +95,6 @@
     });
   });
 
-  // Steps accordion
   document.querySelectorAll("[data-steps]").forEach((root) => {
     const items = root.querySelectorAll(".step-item");
     items.forEach((item) => {
