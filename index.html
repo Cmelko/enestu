@@ -48,7 +48,7 @@
           <p class="lead">Všechny dokumenty, technika i opravy na jednom místě. Žádná jazyková bariéra, žádné platby naslepo. Enestu hlídá váš byt nebo dům, i když jste tisíce kilometrů daleko.</p>
           <div class="btn-row">
             <a class="btn btn--primary" href="#cta">Založit domov zdarma</a>
-            <a class="btn btn--text" href="jak-to-funguje.html">Jak to funguje →</a>
+            <button type="button" class="btn btn--text js-noop">Jak to funguje →</button>
           </div>
           <ul class="trust">
             <li><span class="check">✓</span> Bez karty na začátek</li>
@@ -71,65 +71,344 @@
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Pro koho je Enestu">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-audience.jpg" alt="Pro koho je Enestu — čtyři typy majitelů" width="1440" height="660" />
-        <div class="hotspots hotspots--aud">
-          <a href="jak-to-funguje.html" aria-label="Expat / vlastník na dálku"></a>
-          <a href="jak-to-funguje.html" aria-label="Přeshraniční investor"></a>
-          <a href="cenik.html" aria-label="Pronajímatel na dálku"></a>
-          <a href="bezpecnost.html" aria-label="Majitel více nemovitostí"></a>
+    <section class="section home-audience reveal" aria-labelledby="aud-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow--yellow">Pro koho je Enestu</span>
+          <h2 class="section-title" id="aud-title" style="margin-top:1rem">Postaráme se o váš<br />domov, ať jste kdekoli</h2>
+          <p class="section-lead">Pro každého, kdo spravuje nemovitost na dálku.</p>
+        </div>
+        <div class="audience-grid">
+          <article class="audience-card audience-card--hl">
+            <img src="assets/ui/ill-expat.jpg" alt="" width="280" height="170" />
+            <h3>Expat / vlastník na dálku</h3>
+            <p>Bydlíte v zahraničí, byt nebo dům máte v Česku.</p>
+            <button type="button" class="link js-noop">Více o Trezoru →</button>
+          </article>
+          <article class="audience-card">
+            <img src="assets/ui/ill-investor.jpg" alt="" width="280" height="170" />
+            <h3>Přeshraniční investor</h3>
+            <p>Spravujete zděděnou nebo druhou nemovitost na dálku.</p>
+            <button type="button" class="link js-noop">Více o Trezoru →</button>
+          </article>
+          <article class="audience-card">
+            <img src="assets/ui/ill-landlord.jpg" alt="" width="280" height="170" />
+            <h3>Pronajímatel na dálku</h3>
+            <p>Řešíte údržbu pronájmů, aniž byste byli na místě.</p>
+            <button type="button" class="link js-noop">Jak se počítá →</button>
+          </article>
+          <article class="audience-card">
+            <img src="assets/ui/ill-portfolio.jpg" alt="" width="280" height="170" />
+            <h3>Majitel více nemovitostí</h3>
+            <p>Držíte portfolio domů či bytů a chcete jeden přehled.</p>
+            <button type="button" class="link js-noop">Jak funguje úschova →</button>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Tři starosti">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-bento.jpg" alt="Pas domova, skóre stavu, platba v úschově a prověření řemeslníci" width="1440" height="975" />
-        <div class="hotspots hotspots--bento">
-          <a href="jak-to-funguje.html" aria-label="Pas domova a Trezor"></a>
-          <a href="jak-to-funguje.html" aria-label="Skóre stavu domova"></a>
-          <a href="bezpecnost.html" aria-label="Platba až po dokončení"></a>
-          <a href="bezpecnost.html" aria-label="Prověření řemeslníci"></a>
+    <section class="section home-bento reveal" aria-labelledby="bento-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow eyebrow--yellow">Pro koho je Enestu</span>
+          <h2 class="section-title" id="bento-title" style="margin-top:1rem">Tři starosti, se kterými je konec</h2>
+          <p class="section-lead">Ať bydlíte v Praze, nebo v Singapuru — o váš domov je postaráno stejně.</p>
+        </div>
+        <div class="bento">
+          <article class="bento__wide" style="background-image:url('assets/ui/feat-interior.jpg')">
+            <div class="bento__wide-inner">
+              <h3>Pas domova &amp; Trezor</h3>
+              <p>Kupní smlouva, plány, záruky, revize i faktury — všechno bezpečně na jednom místě a dostupné z mobilu kdekoli na světě.</p>
+              <button type="button" class="link-light js-noop">Zjistit víc →</button>
+              <div class="trezor-mini trezor-mini--light">
+                <span><strong>Identita</strong><br />8 dokumentů</span>
+                <span><strong>Dokumentace</strong><br />12 položek</span>
+                <span><strong>Systémy</strong><br />5 zařízení</span>
+                <span><strong>Finance</strong><br />3 smlouvy</span>
+              </div>
+            </div>
+          </article>
+          <article class="bento__blue">
+            <h3>Skóre stavu domova</h3>
+            <p>Jednoduché číslo, které ukáže, jak na tom váš domov je — včetně termínů údržby.</p>
+            <button type="button" class="link-light js-noop">Zjistit víc →</button>
+            <div class="hari-mini">
+              <div class="ring">86</div>
+              <div>
+                <strong>HARI skóre</strong>
+                <div>Dobrý stav</div>
+                <small>⚡ Revize elektro — do 30 dnů</small>
+              </div>
+            </div>
+          </article>
+          <article class="bento__half">
+            <h3>Platba až po dokončení</h3>
+            <p>Peníze za opravu uvolníte, až když je práce hotová k vaší spokojenosti.</p>
+            <button type="button" class="link js-noop">Zjistit víc →</button>
+            <div class="escrow-mini">
+              <div class="escrow-mini__top">
+                <span>Oprava: výměna baterie</span>
+                <strong>€114</strong>
+                <em>v úschově</em>
+              </div>
+              <div class="escrow-mini__steps">
+                <span class="is-done">Schváleno</span>
+                <span class="is-active">V úschově</span>
+                <span>Po kontrole</span>
+              </div>
+            </div>
+          </article>
+          <article class="bento__half bento__half--pro">
+            <div>
+              <h3>Prověření řemeslníci</h3>
+              <p>Žádné hodiny obvolávání. Přiřadíme ověřeného řemeslníka ve vaší lokalitě.</p>
+              <button type="button" class="link js-noop">Zjistit víc →</button>
+            </div>
+            <div class="pro-mini">
+              <img src="assets/ui/pro-jan.jpg" alt="Jan Novák" width="120" height="120" />
+              <span class="pro-mini__badge">Přiřazeno</span>
+              <strong>Jan Novák · Instalatér</strong>
+              <span>★ 4,9 · 128 hodnocení</span>
+              <div class="pro-mini__tags">
+                <span>✓ Ověřené IČO</span>
+                <span>✓ Pojištění</span>
+                <span>✓ Doklady</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Služby">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-services.jpg" alt="Vyřešíte elektroinstalace, instalatérství, topení a další" width="1440" height="507" />
+    <section class="services-strip services-strip--home reveal" aria-label="Služby">
+      <div class="container services-strip__inner">
+        <h2>Vyřešíte</h2>
+        <ul data-services>
+          <li>Elektroinstalace</li>
+          <li>Instalatérství</li>
+          <li class="is-active">Topení &amp; klima</li>
+          <li>Truhlářství</li>
+          <li>Zámečnictví</li>
+        </ul>
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Funkce do hloubky">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-app.jpg" alt="Vše, co ke správě domova potřebujete" width="1440" height="675" />
-        <a class="hotspot hotspot--app-cta" href="jak-to-funguje.html" aria-label="Jak to funguje"></a>
+    <section class="section home-features reveal" data-feature-tabs aria-labelledby="feat-title">
+      <div class="container home-features__grid">
+        <div class="home-features__side">
+          <span class="eyebrow eyebrow--yellow">Funkce do hloubky</span>
+          <h2 class="section-title" id="feat-title" style="margin-top:1rem">Vše, co ke správě domova potřebujete</h2>
+          <p class="section-lead">Prohlédněte si hlavní funkce Enestu — klikněte a podívejte se blíž.</p>
+          <div class="feat-tabs" role="tablist" aria-label="Funkce">
+            <button type="button" class="feat-tab is-active" role="tab" aria-selected="true" data-feat="trezor">Trezor &amp; Pas domova</button>
+            <button type="button" class="feat-tab" role="tab" aria-selected="false" data-feat="skore">Skóre stavu domova</button>
+            <button type="button" class="feat-tab" role="tab" aria-selected="false" data-feat="opravy">Opravy bez starostí</button>
+            <button type="button" class="feat-tab" role="tab" aria-selected="false" data-feat="sprava">Správa na dálku</button>
+          </div>
+        </div>
+        <div class="home-features__stage">
+          <div class="feat-panel is-active" data-feat-panel="trezor">
+            <div class="feat-panel__media" style="background-image:url('assets/ui/feat-interior.jpg')">
+              <img class="feat-phone" src="assets/ui/phone-feature.jpg" alt="Enestu aplikace" width="220" height="520" />
+            </div>
+            <div class="feat-panel__card">
+              <h3>Všechny dokumenty o domě na jednom místě</h3>
+              <p>Kupní smlouva, plány, záruky i faktury — bezpečně v digitálním trezoru.</p>
+              <ul>
+                <li>Pas domova s klíčovými parametry nemovitosti</li>
+                <li>Roztříděno do složek: Identita, Dokumentace, Systémy, Finance</li>
+                <li>Dokument sdílíte s řemeslníkem nebo úřadem na pár kliknutí</li>
+              </ul>
+              <button type="button" class="btn btn--ghost js-noop">Jak to funguje →</button>
+            </div>
+          </div>
+          <div class="feat-panel" data-feat-panel="skore" hidden>
+            <div class="feat-panel__media" style="background-image:url('assets/ui/feat-interior.jpg')">
+              <img class="feat-phone" src="assets/ui/phone-feature.jpg" alt="Skóre stavu domova" width="220" height="520" />
+            </div>
+            <div class="feat-panel__card">
+              <h3>Jedno číslo místo chaosu v hlavě</h3>
+              <p>HARI skóre ukáže stav domova a připomene revize dřív, než vznikne problém.</p>
+              <ul>
+                <li>Přehledné skóre 0–100</li>
+                <li>Připomínky údržby s termíny</li>
+                <li>Historie změn po každé opravě</li>
+              </ul>
+              <button type="button" class="btn btn--ghost js-noop">Jak to funguje →</button>
+            </div>
+          </div>
+          <div class="feat-panel" data-feat-panel="opravy" hidden>
+            <div class="feat-panel__media" style="background-image:url('assets/ui/feat-interior.jpg')">
+              <img class="feat-phone" src="assets/ui/phone-feature.jpg" alt="Opravy" width="220" height="520" />
+            </div>
+            <div class="feat-panel__card">
+              <h3>Oprava bez obvolávání a jazykové bariéry</h3>
+              <p>Zadáte požadavek, my přiřadíme ověřeného řemeslníka a držíme platbu v úschově.</p>
+              <ul>
+                <li>Jasná cena předem</li>
+                <li>Fotodokumentace průběhu</li>
+                <li>Platba až po vaší kontrole</li>
+              </ul>
+              <button type="button" class="btn btn--ghost js-noop">Jak to funguje →</button>
+            </div>
+          </div>
+          <div class="feat-panel" data-feat-panel="sprava" hidden>
+            <div class="feat-panel__media" style="background-image:url('assets/ui/feat-interior.jpg')">
+              <img class="feat-phone" src="assets/ui/phone-feature.jpg" alt="Správa na dálku" width="220" height="520" />
+            </div>
+            <div class="feat-panel__card">
+              <h3>Celý domov v kapse — odkudkoli</h3>
+              <p>Sledujte stav, dokumenty i opravy z mobilu, i když jste tisíce kilometrů daleko.</p>
+              <ul>
+                <li>Jedna aplikace pro všechny nemovitosti</li>
+                <li>Notifikace o důležitých termínech</li>
+                <li>Sdílení přístupu s rodinou</li>
+              </ul>
+              <button type="button" class="btn btn--ghost js-noop">Jak to funguje →</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Výzva k akci">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-cta-band.jpg" alt="Celý váš domov v jedné aplikaci" width="1440" height="250" />
-        <a class="hotspot hotspot--band-cta" href="#cta" aria-label="Založit domov zdarma"></a>
+    <section class="section home-cta-band reveal">
+      <div class="container">
+        <div class="cta-band">
+          <img class="cta-band__ill" src="assets/ui/cta-ill.jpg" alt="" width="260" height="160" />
+          <div class="cta-band__copy">
+            <h2>Celý váš domov v jedné aplikaci</h2>
+            <p>Začněte zdarma — prvních 6 měsíců bez karty a bez závazku.</p>
+          </div>
+          <a class="btn btn--primary" href="#cta">Založit domov zdarma →</a>
+        </div>
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Jak to funguje">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-steps.jpg" alt="Od založení k hotové opravě ve třech krocích" width="1440" height="730" />
+    <section class="section home-steps reveal" data-steps aria-labelledby="steps-title">
+      <div class="container home-steps__grid">
+        <div class="home-steps__visual">
+          <img src="assets/ui/steps-visual.jpg" alt="Prověřený řemeslník Jan Novák" width="560" height="540" />
+        </div>
+        <div class="home-steps__copy">
+          <span class="eyebrow eyebrow--yellow">Jak to funguje</span>
+          <h2 class="section-title" id="steps-title" style="margin-top:1rem">Od založení k hotové opravě ve třech krocích</h2>
+          <div class="steps-list">
+            <button type="button" class="step-item is-active" data-step="1">
+              <span class="step-item__num">01</span>
+              <span class="step-item__body">
+                <strong>Založíte domov</strong>
+                <p>Vyplníte základní údaje o nemovitosti a nahrajete dokumenty. Aplikace zdarma spočítá výchozí skóre stavu.</p>
+              </span>
+            </button>
+            <button type="button" class="step-item" data-step="2">
+              <span class="step-item__num">02</span>
+              <span class="step-item__body">
+                <strong>Zadáte opravu</strong>
+                <p>Popíšete problém, přiložíte fotky — přiřadíme ověřeného řemeslníka ve vaší lokalitě.</p>
+              </span>
+            </button>
+            <button type="button" class="step-item" data-step="3">
+              <span class="step-item__num">03</span>
+              <span class="step-item__body">
+                <strong>Platíte až po kontrole</strong>
+                <p>Peníze držíme v úschově. Uvolníte je, až když je práce hotová k vaší spokojenosti.</p>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Reference">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-reviews.jpg" alt="Klid na dálku — co říkají majitelé" width="1440" height="725" />
+    <section class="section home-reviews reveal" data-tabs aria-labelledby="rev-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow eyebrow--yellow">Co říkají majitelé</span>
+          <h2 class="section-title" id="rev-title" style="margin-top:1rem">Klid na dálku</h2>
+          <div class="review-filters">
+            <button type="button" class="tab is-active" data-tab="all">Vše</button>
+            <button type="button" class="tab" data-tab="remote">Správa na dálku</button>
+            <button type="button" class="tab" data-tab="pros">Řemeslníci</button>
+            <button type="button" class="tab" data-tab="escrow">Úschova zálohy</button>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="testimonial is-featured" data-tab-panel="remote,escrow">
+            <p>„Bydlím v Mnichově, byt mám v Brně. Dřív jsem kvůli každé maličkosti musel shánět někoho přes známé. <strong>Teď to vyřídím z mobilu za pět minut.</strong>“</p>
+            <footer>
+              <img src="assets/ui/avatar-tomas.jpg" alt="" width="40" height="40" />
+              <div>
+                <strong>Tomáš H. <span class="verified" aria-label="ověřeno">✓</span></strong>
+                <span>majitel bytu, žije v Německu</span>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial" data-tab-panel="remote,pros">
+            <p>„Spravuju dvě nemovitosti z Kanady. Enestu mi dalo přehled o dokumentech i opravách — <strong>bez telefonátů o půlnoci.</strong>“</p>
+            <footer>
+              <img src="assets/ui/avatar-tomas.jpg" alt="" width="40" height="40" />
+              <div>
+                <strong>Eva K. <span class="verified">✓</span></strong>
+                <span>majitelka, žije v Kanadě</span>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial" data-tab-panel="pros,escrow">
+            <p>„Úschova zálohy je přesně to, co jsem potřeboval. <strong>Platím až když vidím výsledek</strong> — a řemeslník je ověřený.“</p>
+            <footer>
+              <img src="assets/ui/avatar-tomas.jpg" alt="" width="40" height="40" />
+              <div>
+                <strong>Martin S. <span class="verified">✓</span></strong>
+                <span>investor, žije v Rakousku</span>
+              </div>
+            </footer>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="mock-sec reveal" aria-label="Případové studie">
-      <div class="mock-frame">
-        <img src="assets/mock/sec-cases.jpg" alt="Případové studie — Obnova terasy Praha Jinonice" width="1440" height="665" />
+    <section class="section home-cases reveal" aria-labelledby="cases-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow eyebrow--yellow">Případová studie</span>
+          <h2 class="section-title" id="cases-title" style="margin-top:1rem">Případové studie</h2>
+        </div>
+        <article class="case-card">
+          <div class="case-card__media" style="background-image:url('assets/ui/case-terrace.jpg')">
+            <div class="case-card__badges">
+              <span>✓ Zakázka úspěšně dokončena</span>
+              <span>SP-2600001</span>
+            </div>
+            <h3>Obnova terasy — Praha Jinonice</h3>
+            <p>Zanedbaný povrch z thermoborovice, který 6 let neprošel údržbou a měl kriticky poškozené prkno.</p>
+          </div>
+          <div class="case-card__timeline">
+            <div class="case-step">
+              <span class="case-step__dot">✓</span>
+              <div>
+                <small>12. 6.</small>
+                <strong>Vložení požadavku &amp; výchozí HARI</strong>
+                <p>Majitel nahrál 3 fotky a založil požadavek na opravu.</p>
+              </div>
+            </div>
+            <div class="case-step">
+              <span class="case-step__dot">✓</span>
+              <div>
+                <small>12. 6.</small>
+                <strong>Přesun termínu jedním klikem</strong>
+                <p>Termín se upravil podle dostupnosti řemeslníka.</p>
+              </div>
+            </div>
+            <div class="case-step">
+              <span class="case-step__dot">✓</span>
+              <div>
+                <small>12. 6.</small>
+                <strong>Instalace, ověření &amp; výplata</strong>
+                <p>Po kontrole uvolněna úschova €780 přes SEPA.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="case-dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
       </div>
     </section>
 

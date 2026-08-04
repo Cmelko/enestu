@@ -54,6 +54,43 @@
     }
   }
 
+  // Demo buttons — clickable, nowhere
+  document.querySelectorAll(".js-noop").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  });
+
+  // Feature tabs
+  document.querySelectorAll("[data-feature-tabs]").forEach((root) => {
+    const tabs = root.querySelectorAll(".feat-tab");
+    const panels = root.querySelectorAll("[data-feat-panel]");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const id = tab.dataset.feat;
+        tabs.forEach((t) => {
+          t.classList.toggle("is-active", t === tab);
+          t.setAttribute("aria-selected", t === tab ? "true" : "false");
+        });
+        panels.forEach((panel) => {
+          const match = panel.dataset.featPanel === id;
+          panel.classList.toggle("is-active", match);
+          panel.hidden = !match;
+        });
+      });
+    });
+  });
+
+  // Steps accordion
+  document.querySelectorAll("[data-steps]").forEach((root) => {
+    const items = root.querySelectorAll(".step-item");
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        items.forEach((i) => i.classList.toggle("is-active", i === item));
+      });
+    });
+  });
+
   document.querySelectorAll("[data-tabs]").forEach((root) => {
     const tabs = root.querySelectorAll(".tab");
     const cards = root.querySelectorAll("[data-tab-panel]");
