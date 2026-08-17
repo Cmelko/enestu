@@ -37,12 +37,12 @@
 
   <main>
     <section class="page-hero page-hero--yellow">
-      <div class="container hero--split">
-        <div>
+      <div class="container about-hero">
+        <div class="about-hero__copy">
           <span class="eyebrow">O nás</span>
-          <h1 class="section-title" style="margin-top:1rem;font-size:clamp(2rem,4vw,3.1rem)">Klid na dálku — to je důvod, proč Enestu existuje</h1>
-          <p class="lead" style="margin-top:1rem;color:var(--ink-soft);max-width:36rem">Stavíme digitální domov pro majitele, kteří žijí jinde, než stojí jejich byt nebo dům. Dokumenty, technika i opravy na jednom místě — bez jazykové bariéry a bez plateb naslepo.</p>
-          <div class="btn-row" style="margin-top:1.5rem">
+          <h1 class="section-title">Klid na dálku — proto Enestu existuje</h1>
+          <p class="lead">Digitální domov pro majitele, kteří žijí jinde, než stojí jejich byt nebo dům. Dokumenty, technika i opravy na jednom místě.</p>
+          <div class="btn-row">
             <a class="btn btn--primary" href="index.html#cta">Založit domov zdarma</a>
             <a class="btn btn--text" href="jak-to-funguje.html">Jak to funguje →</a>
           </div>
@@ -52,13 +52,18 @@
             <li><span class="check">✓</span> Platíte až po kontrole</li>
           </ul>
         </div>
-        <div class="hero-visual hero-visual--yellow" aria-hidden="true">
-          <div class="iso-houses">
-            <div class="house"></div>
-            <div class="house"></div>
-            <div class="house"></div>
-          </div>
-        </div>
+        <figure class="about-hero__media">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80" alt="Světlý obývací pokoj" width="1400" height="1050" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div><strong>Česko</strong><span>první trh</span></div>
+        <div><strong>EU</strong><span>data a servery</span></div>
+        <div><strong>0 %</strong><span>provize z práce partnera</span></div>
+        <div><strong>6 měs.</strong><span>zdarma na začátek</span></div>
       </div>
     </section>
 
@@ -66,12 +71,12 @@
       <div class="container about-mission">
         <div>
           <span class="eyebrow eyebrow--soft">Proč existujeme</span>
-          <h2 class="section-title" style="margin-top:1rem">Domov v Česku, život kdekoli jinde</h2>
-          <p class="section-lead">Když bydlíte v zahraničí, každá kapající baterie se změní v řetěz telefonátů, překladů a záloh, kterým nerozumíte. Dokumenty jsou v šuplíku u rodičů, řemeslníka sháníte přes známé a o stavu bytu víte jen to, co vám někdo napíše.</p>
-          <p class="section-lead">Enestu to spojuje do jedné aplikace: Pas domova, Trezor dokumentů, skóre stavu a opravy s ověřenými partnery. Peníze držíme v úschově, dokud práci nepotvrdíte.</p>
+          <h2 class="section-title">Domov v Česku, život kdekoli jinde</h2>
+          <p class="section-lead">Když bydlíte v zahraničí, každá kapající baterie se změní v řetěz telefonátů, překladů a záloh, kterým nerozumíte. Dokumenty jsou v šuplíku u rodičů a o stavu bytu víte jen to, co vám někdo napíše.</p>
+          <p class="section-lead">Enestu to spojuje do jedné aplikace: Pas domova, Trezor, skóre stavu a opravy s ověřenými partnery. Peníze držíme v úschově, dokud práci nepotvrdíte.</p>
         </div>
         <blockquote class="about-quote">
-          <p>„Chceme, abyste o svém bytě v Brně věděli víc z Mnichova, než jste věděli, když jste bydleli o ulici dál.“</p>
+          <p>Chceme, abyste o svém bytě v Brně věděli víc z Mnichova, než jste věděli, když jste bydleli o ulici dál.</p>
           <footer>Tým Enestu</footer>
         </blockquote>
       </div>
@@ -79,12 +84,12 @@
 
     <section class="section section--cream" id="hodnoty">
       <div class="container">
-        <div class="section-head section-head--center">
+        <div class="section-head">
           <span class="eyebrow eyebrow--soft">Čemu věříme</span>
-          <h2 class="section-title" style="margin-top:1rem">Čtyři pravidla, od kterých neustoupíme</h2>
+          <h2 class="section-title">Čtyři pravidla, od kterých neustoupíme</h2>
           <p class="section-lead">Nejsme burza zakázek ani realitní kancelář. Jsme vrstva důvěry mezi majitelem a řemeslníkem.</p>
         </div>
-        <div class="card-grid card-grid--4">
+        <div class="about-values">
           <article class="card">
             <span class="about-value-num">01</span>
             <h3>Klid na dálku</h3>
@@ -109,46 +114,67 @@
       </div>
     </section>
 
-    <section class="section" id="pribeh">
+    <section class="section" id="tym">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow--soft">Tým</span>
+          <h2 class="section-title">Lidé za Enestu</h2>
+          <p class="section-lead">Fotky a jména sem doplníme. Zatím držíme směr produktu — klid na dálku pro majitele v zahraničí.</p>
+        </div>
+        <div class="about-team">
+          <article class="about-person">
+            <div class="about-person__photo" aria-hidden="true">01</div>
+            <h3>Zakladatel</h3>
+            <p>Jméno a foto doplníme</p>
+          </article>
+          <article class="about-person">
+            <div class="about-person__photo" aria-hidden="true">02</div>
+            <h3>Produkt</h3>
+            <p>Jméno a foto doplníme</p>
+          </article>
+          <article class="about-person">
+            <div class="about-person__photo" aria-hidden="true">03</div>
+            <h3>Partneři</h3>
+            <p>Jméno a foto doplníme</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream" id="pribeh">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow eyebrow--soft">Příběh</span>
-          <h2 class="section-title" style="margin-top:1rem">Od nápadu ke spuštění v Česku</h2>
-          <p class="section-lead">Stavíme produkt pro lidi, kteří nemovitost zdědili, koupili na investici, nebo odjeli a byt nechali doma. Nejdřív poctivě v Česku — pak dál.</p>
+          <h2 class="section-title">Od nápadu ke spuštění v Česku</h2>
+          <p class="section-lead">Nejdřív poctivě v Česku — pak Slovensko a další země, kde majitelé řeší stejný problém.</p>
         </div>
-        <ol class="about-timeline">
+        <ol class="about-steps">
           <li>
-            <span class="about-timeline__when">2025</span>
-            <div>
-              <strong>Nápad</strong>
-              <p>Vzniká Enestu: digitální složka nemovitosti plus opravy, které jdou vyřídit z mobilu.</p>
-            </div>
+            <span>2025</span>
+            <strong>Nápad</strong>
+            <p>Digitální složka nemovitosti plus opravy, které jdou vyřídit z mobilu.</p>
           </li>
           <li>
-            <span class="about-timeline__when">2026</span>
-            <div>
-              <strong>Start v Česku</strong>
-              <p>Spouštíme první verzi pro majitele bytů a domů. Trezor, skóre stavu a síť ověřených partnerů.</p>
-            </div>
+            <span>2026</span>
+            <strong>Start v Česku</strong>
+            <p>Trezor, skóre stavu a síť ověřených partnerů pro majitele bytů a domů.</p>
           </li>
           <li>
-            <span class="about-timeline__when">Brzy</span>
-            <div>
-              <strong>Slovensko a střední Evropa</strong>
-              <p>Stejný klid na dálku i za hranicemi — nejdřív tam, kde majitelé řeší stejný problém.</p>
-            </div>
+            <span>Brzy</span>
+            <strong>Slovensko a střední Evropa</strong>
+            <p>Stejný klid na dálku i za hranicemi — až bude Česko sedět.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="section section--cream" id="spolecnost">
+    <section class="section" id="spolecnost">
       <div class="container about-company">
         <div>
-          <span class="eyebrow eyebrow--light">Společnost</span>
-          <h2 class="section-title" style="margin-top:1rem">Enestu s.r.o.</h2>
+          <span class="eyebrow eyebrow--soft">Společnost</span>
+          <h2 class="section-title">Enestu s.r.o.</h2>
           <p class="section-lead">Jsme technologický zprostředkovatel. Platby zpracovává Stripe, data držíme v EU. Nejsme banka ani realitka — držíme workflow mezi majitelem a partnerem.</p>
-          <div class="btn-row" style="margin-top:1.5rem">
+          <div class="btn-row">
             <a class="btn btn--primary" href="kontakt.html">Napsat nám</a>
             <a class="btn btn--text" href="bezpecnost.html">Jak chráníme platby →</a>
           </div>

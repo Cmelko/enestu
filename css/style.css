@@ -2264,141 +2264,250 @@ table.compare tr:last-child td {
 }
 
 /* —— About / O nás —— */
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 3rem 3.5rem;
+  align-items: center;
+}
+
+.about-hero__copy .section-title {
+  margin-top: 1.1rem;
+  font-size: clamp(2.15rem, 4vw, 3.2rem);
+  max-width: 12em;
+  line-height: 1.12;
+}
+
+.about-hero__copy .lead {
+  margin-top: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 34rem;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.about-hero__copy .btn-row {
+  margin-top: 1.6rem;
+}
+
+.about-hero__media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--cream-2);
+}
+
+.about-hero__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .about-mission {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 2.5rem 3rem;
-  align-items: start;
+  gap: 2.75rem 3.5rem;
+  align-items: center;
+}
+
+.about-mission .section-title {
+  margin-top: 1rem;
 }
 
 .about-quote {
   margin: 0;
-  padding: 1.75rem 1.6rem;
+  padding: 2.1rem 2rem;
   background: var(--yellow);
-  border-radius: var(--radius);
-  align-self: center;
+  border-radius: 22px;
 }
 
 .about-quote p {
-  font-size: 1.2rem;
+  font-size: 1.28rem;
   font-weight: 650;
   letter-spacing: -0.02em;
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--ink);
 }
 
 .about-quote footer {
-  margin-top: 1.1rem;
-  font-size: 0.88rem;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--ink-soft);
 }
 
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.about-values .card {
+  padding: 1.6rem 1.65rem 1.7rem;
+}
+
 .about-value-num {
   display: block;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.9rem;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--muted);
 }
 
-.about-timeline {
+.about-team {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.about-person {
+  padding: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.about-person__photo {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 14px,
+      rgba(26, 20, 8, 0.04) 14px,
+      rgba(26, 20, 8, 0.04) 15px
+    ),
+    var(--cream-2);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  color: var(--muted-2);
+}
+
+.about-person h3 {
+  margin-top: 1.05rem;
+  font-size: 1.12rem;
+}
+
+.about-person p {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.about-steps {
   list-style: none;
   display: grid;
-  gap: 0;
-  border-left: 2px solid var(--line);
-  margin-left: 0.35rem;
-}
-
-.about-timeline li {
-  display: grid;
-  grid-template-columns: 6.5rem minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
-  padding: 0 0 1.75rem 1.5rem;
-  position: relative;
 }
 
-.about-timeline li::before {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: 0.35rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--blue);
-  box-shadow: 0 0 0 4px var(--white);
+.about-steps li {
+  padding: 1.55rem 1.5rem 1.65rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
 }
 
-.about-timeline li:last-child {
-  padding-bottom: 0;
+.about-steps span {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
-.about-timeline__when {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+.about-steps strong {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 1.15rem;
 }
 
-.about-timeline p {
-  margin-top: 0.35rem;
+.about-steps p {
+  margin-top: 0.45rem;
   color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .about-company {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 2rem 3rem;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 2.5rem 3.5rem;
   align-items: center;
+}
+
+.about-company .section-title {
+  margin-top: 1rem;
+}
+
+.about-company .btn-row {
+  margin-top: 1.5rem;
 }
 
 .about-facts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 .about-facts > div {
-  background: var(--white);
+  background: var(--cream);
   border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  padding: 1.15rem 1.2rem;
 }
 
 .about-facts span {
   display: block;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .about-facts strong {
   display: block;
-  margin-top: 0.35rem;
-  font-size: 1.02rem;
+  margin-top: 0.4rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
 }
 
 .about-facts a {
   color: var(--blue);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
+  .about-hero,
   .about-mission,
-  .about-company {
+  .about-company,
+  .about-team,
+  .about-steps {
     grid-template-columns: 1fr;
   }
 
-  .about-timeline li {
-    grid-template-columns: 1fr;
-    gap: 0.35rem;
+  .about-hero__media {
+    order: -1;
+    max-height: 320px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 700px) {
+  .about-values,
   .about-facts {
     grid-template-columns: 1fr;
   }
