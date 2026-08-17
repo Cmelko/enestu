@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Co o nás řekli — Enestu</title>
+  <meta name="description" content="Ohlasy majitelů, kteří spravují byt nebo dům v Česku na dálku s Enestu." />
+  <link rel="icon" href="assets/enestu-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Spouštíme v Česku. Brzy také na Slovensku a v dalších zemích střední Evropy.</div>
+  <header class="site-header">
+    <div class="container nav" id="nav">
+      <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav-links" aria-label="Hlavní navigace">
+          <a href="index.html">Domov</a>
+          <a href="jak-to-funguje.html">Jak to funguje</a>
+          <a href="cenik.html">Ceník</a>
+          <a href="bezpecnost.html">Bezpečnost</a>
+          <a href="o-nas.html">O nás</a>
+          <span class="nav-sep" aria-hidden="true"></span>
+          <a class="nav-muted" href="blog.html">Blog</a>
+          <a class="nav-muted is-active" href="co-o-nas-rekli.html">Co o nás řekli</a>
+          <a class="nav-muted" href="pro-remeslniky.html">Pro řemeslníky</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
+          <a class="btn btn--outline-nav" href="cenik.html">Vyzkoušet zdarma</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--yellow">
+      <div class="container">
+        <span class="eyebrow">Ohlasy</span>
+        <h1 class="section-title quotes-hero-title">Co o nás řekli</h1>
+        <p class="lead quotes-hero-lead">Hlasy majitelů, kteří řeší byt nebo dům v Česku na dálku. Další ohlasy sem doplníme — stránka je připravená.</p>
+      </div>
+    </section>
+
+    <section class="section" data-tabs>
+      <div class="container">
+        <div class="blog-filters" role="tablist" aria-label="Témata ohlasů">
+          <button type="button" class="tab is-active" data-tab="all">Vše</button>
+          <button type="button" class="tab" data-tab="remote">Správa na dálku</button>
+          <button type="button" class="tab" data-tab="pros">Řemeslníci</button>
+          <button type="button" class="tab" data-tab="escrow">Úschova zálohy</button>
+        </div>
+
+        <div class="quotes-grid">
+          <article class="quote-card is-featured" data-tab-panel="remote,escrow">
+            <p>„Bydlím v Mnichově, byt mám v Brně. Dřív jsem kvůli každé maličkosti musel shánět někoho přes známé. <strong>Teď to vyřídím z mobilu za pět minut.</strong>“</p>
+            <footer>
+              <img src="assets/ui/avatar-tomas.jpg" alt="" width="44" height="44" />
+              <div>
+                <strong>Tomáš H. <span class="verified" aria-label="ověřeno">✓</span></strong>
+                <span>majitel bytu, žije v Německu</span>
+              </div>
+            </footer>
+          </article>
+          <article class="quote-card" data-tab-panel="remote,pros">
+            <p>„Spravuju dvě nemovitosti z Kanady. Enestu mi dalo přehled o dokumentech i opravách — <strong>bez telefonátů o půlnoci.</strong>“</p>
+            <footer>
+              <img src="assets/ui/avatar-eva.svg" alt="" width="44" height="44" />
+              <div>
+                <strong>Eva K. <span class="verified">✓</span></strong>
+                <span>majitelka, žije v Kanadě</span>
+              </div>
+            </footer>
+          </article>
+          <article class="quote-card" data-tab-panel="pros,escrow">
+            <p>„Úschova zálohy je přesně to, co jsem potřeboval. <strong>Platím až když vidím výsledek</strong> — a řemeslník je ověřený.“</p>
+            <footer>
+              <img src="assets/ui/avatar-martin.svg" alt="" width="44" height="44" />
+              <div>
+                <strong>Martin S. <span class="verified">✓</span></strong>
+                <span>investor, žije v Rakousku</span>
+              </div>
+            </footer>
+          </article>
+          <article class="quote-card quote-card--placeholder" data-tab-panel="remote">
+            <p>Sem přijde další ohlas majitele.</p>
+            <footer>
+              <span class="quote-card__slot" aria-hidden="true">+</span>
+              <div>
+                <strong>Jméno</strong>
+                <span>Doplníme</span>
+              </div>
+            </footer>
+          </article>
+          <article class="quote-card quote-card--placeholder" data-tab-panel="pros">
+            <p>Sem přijde ohlas k řemeslníkům a opravám.</p>
+            <footer>
+              <span class="quote-card__slot" aria-hidden="true">+</span>
+              <div>
+                <strong>Jméno</strong>
+                <span>Doplníme</span>
+              </div>
+            </footer>
+          </article>
+          <article class="quote-card quote-card--placeholder" data-tab-panel="escrow">
+            <p>Sem přijde ohlas k úschově platby.</p>
+            <footer>
+              <span class="quote-card__slot" aria-hidden="true">+</span>
+              <div>
+                <strong>Jméno</strong>
+                <span>Doplníme</span>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow--soft">Placeholdery</span>
+          <h2 class="section-title">Blog a O nás</h2>
+          <p class="section-lead">Dvě související stránky se stejnou hlavičkou i patičkou. Odtud na ně přejdete, až budeme doplňovat obsah.</p>
+        </div>
+        <div class="placeholder-pair">
+          <a class="placeholder-card" href="blog.html">
+            <span class="eyebrow eyebrow--soft">Placeholder</span>
+            <h3>Blog</h3>
+            <p>Rady pro majitele na dálku. Články budeme sdílet i na LinkedIn.</p>
+            <span class="link">Otevřít blog →</span>
+          </a>
+          <a class="placeholder-card" href="o-nas.html">
+            <span class="eyebrow eyebrow--soft">Placeholder</span>
+            <h3>O nás</h3>
+            <p>Příběh Enestu, hodnoty a sloty na tým. Fotky a jména doplníme.</p>
+            <span class="link">Otevřít O nás →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="cta">
+      <div class="container">
+        <h2>Založte domov za pár minut</h2>
+        <p class="section-lead" style="margin-inline:auto">Prvních 6 měsíců zdarma. Bez karty, bez závazku.</p>
+        <form class="email-form" data-form="waitlist" data-source="ohlasy-cta">
+          <div class="hp-field" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+          <input type="email" name="email" placeholder="vas@email.cz" required aria-label="E-mail" />
+          <button class="btn btn--primary" type="submit">Založit domov</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
+          <p>Digitální domov pro majitele, kteří bydlí daleko.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Produkt</h4>
+          <a href="jak-to-funguje.html">Jak to funguje</a>
+          <a href="cenik.html">Ceník</a>
+          <a href="bezpecnost.html">Bezpečnost</a>
+          <a href="o-nas.html">O nás</a>
+          <a href="blog.html">Blog</a>
+          <a href="co-o-nas-rekli.html">Co o nás řekli</a>
+        </div>
+        <div class="footer-col">
+          <h4>Partneři</h4>
+          <a href="pro-remeslniky.html">Pro řemeslníky</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="https://www.linkedin.com/company/enestu" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-col">
+          <h4>Právní</h4>
+          <a href="ochrana-udaju.html">Ochrana osobních údajů</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Enestu</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
