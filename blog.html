@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Enestu</title>
+  <meta name="description" content="Rady pro majitele nemovitostí na dálku: správa bytu ze zahraničí, revize, úschova plateb a digitální dokumenty." />
+  <link rel="icon" href="assets/enestu-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Spouštíme v Česku. Brzy také na Slovensku a v dalších zemích střední Evropy.</div>
+  <header class="site-header">
+    <div class="container nav" id="nav">
+      <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-drawer" id="nav-drawer">
+        <nav class="nav-links" aria-label="Hlavní navigace">
+          <a href="index.html">Domov</a>
+          <a href="jak-to-funguje.html">Jak to funguje</a>
+          <a href="cenik.html">Ceník</a>
+          <a href="bezpecnost.html">Bezpečnost</a>
+          <a href="o-nas.html">O nás</a>
+          <span class="nav-sep" aria-hidden="true"></span>
+          <a class="nav-muted is-active" href="blog.html">Blog</a>
+          <a class="nav-muted" href="pro-remeslniky.html">Pro řemeslníky</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn--text-nav" href="#" data-portal>Přihlásit se</a>
+          <a class="btn btn--outline-nav" href="cenik.html">Vyzkoušet zdarma</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--yellow blog-hero">
+      <div class="container">
+        <span class="eyebrow">Blog</span>
+        <h1 class="section-title" style="margin-top:1rem">Rady pro majitele, kteří bydlí daleko</h1>
+        <p class="lead" style="margin-top:1rem;color:var(--ink-soft);max-width:38rem">Praktické návody ke správě bytu v Česku, povinným revizím, dokumentům i platbám — bez žargonu a bez zbytečného stresu.</p>
+      </div>
+    </section>
+
+    <section class="section" data-tabs>
+      <div class="container">
+        <article class="blog-featured">
+          <a class="blog-featured__media" href="blog/sprava-bytu-ze-zahranici.html">
+            <img src="assets/ui/feat-interior.jpg" alt="" width="720" height="480" />
+          </a>
+          <div class="blog-featured__copy">
+            <span class="eyebrow eyebrow--soft">Správa na dálku</span>
+            <h2><a href="blog/sprava-bytu-ze-zahranici.html">Jak spravovat byt v Česku, když žijete v zahraničí</a></h2>
+            <p class="section-lead" style="margin-top:0.85rem">Dokumenty, revize a opravy nemusí znamenat noční telefonáty. Tady je postup, který funguje i z Mnichova nebo Toronta.</p>
+            <div class="blog-meta"><span>12. 8. 2026</span><span>6 min čtení</span></div>
+            <a class="btn btn--text" href="blog/sprava-bytu-ze-zahranici.html" style="margin-top:1rem">Číst článek →</a>
+          </div>
+        </article>
+
+        <div class="blog-filters" role="tablist" aria-label="Témata">
+          <button type="button" class="tab is-active" data-tab="all">Vše</button>
+          <button type="button" class="tab" data-tab="remote">Správa na dálku</button>
+          <button type="button" class="tab" data-tab="udrzba">Údržba</button>
+          <button type="button" class="tab" data-tab="platby">Platby</button>
+          <button type="button" class="tab" data-tab="dokumenty">Dokumenty</button>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card" data-tab-panel="udrzba">
+            <a class="blog-card__media" href="blog/revize-ktere-nesmite-vynechat.html">
+              <img src="assets/ui/steps-visual.jpg" alt="" width="640" height="400" />
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Údržba</span>
+              <h3><a href="blog/revize-ktere-nesmite-vynechat.html">Revize, které v Česku nesmíte vynechat</a></h3>
+              <p>Kotel, elektro, komín, plyn. Termíny, které se z dálky snadno ztratí — a pokuta nebo neplatná pojistka je horší než připomínka.</p>
+              <div class="blog-meta"><span>8. 8. 2026</span><span>5 min čtení</span></div>
+            </div>
+          </article>
+          <article class="blog-card" data-tab-panel="platby">
+            <a class="blog-card__media" href="blog/platba-v-uschove.html">
+              <img src="assets/ui/case-terrace.jpg" alt="" width="640" height="400" />
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Platby</span>
+              <h3><a href="blog/platba-v-uschove.html">Platba v úschově: jak funguje a proč ji chcete</a></h3>
+              <p>Peníze nejdou řemeslníkovi hned. Čekají, dokud práci nepotvrdíte — i když nejste v zemi.</p>
+              <div class="blog-meta"><span>4. 8. 2026</span><span>4 min čtení</span></div>
+            </div>
+          </article>
+          <article class="blog-card" data-tab-panel="dokumenty,remote">
+            <a class="blog-card__media" href="blog/digitalni-trezor-nemovitosti.html">
+              <img src="assets/mock/hero-visual.jpg" alt="" width="640" height="400" />
+            </a>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Dokumenty</span>
+              <h3><a href="blog/digitalni-trezor-nemovitosti.html">Digitální trezor: co si uložit k bytu hned</a></h3>
+              <p>Kupní smlouva, revize, pojistka, plány. Složka, kterou otevřete z letiště stejně snadno jako z obýváku.</p>
+              <div class="blog-meta"><span>28. 7. 2026</span><span>5 min čtení</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="cta">
+      <div class="container">
+        <h2>Založte domov za pár minut</h2>
+        <p class="section-lead" style="margin-inline:auto">Prvních 6 měsíců zdarma. Bez karty, bez závazku.</p>
+        <form class="email-form" data-form="waitlist" data-source="blog-cta">
+          <div class="hp-field" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+          <input type="email" name="email" placeholder="vas@email.cz" required aria-label="E-mail" />
+          <button class="btn btn--primary" type="submit">Založit domov</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html"><img src="assets/enestu-icon.svg" alt="" /> ENESTU</a>
+          <p>Digitální domov pro majitele, kteří bydlí daleko.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Produkt</h4>
+          <a href="jak-to-funguje.html">Jak to funguje</a>
+          <a href="cenik.html">Ceník</a>
+          <a href="bezpecnost.html">Bezpečnost</a>
+          <a href="o-nas.html">O nás</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Partneři</h4>
+          <a href="pro-remeslniky.html">Pro řemeslníky</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Právní</h4>
+          <a href="ochrana-udaju.html">Ochrana osobních údajů</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Enestu</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
