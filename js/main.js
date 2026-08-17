@@ -72,10 +72,6 @@
     }
   }
 
-  document.querySelectorAll(".js-noop").forEach((el) => {
-    el.addEventListener("click", (e) => e.preventDefault());
-  });
-
   document.querySelectorAll("[data-feature-tabs]").forEach((root) => {
     const tabs = root.querySelectorAll(".feat-tab");
     const panels = root.querySelectorAll("[data-feat-panel]");

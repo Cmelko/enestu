@@ -320,7 +320,7 @@
   margin-top: 0;
 }
 
-.home .audience-card button.link {
+.home .audience-card .link {
   margin-top: 0.85rem;
   align-self: flex-start;
   background: none;
@@ -334,11 +334,11 @@
   transition: transform 0.25s var(--ease), color 0.2s;
 }
 
-.home .audience-card button.link:hover {
+.home .audience-card .link:hover {
   transform: translateX(3px);
 }
 
-.home .audience-card--hl button.link {
+.home .audience-card--hl .link {
   color: var(--ink);
 }
 
@@ -418,8 +418,8 @@
   opacity: 1;
 }
 
-.home .bento button.link,
-.home .bento button.link-light {
+.home .bento .link,
+.home .bento .link-light {
   margin-top: 0.85rem;
   background: none;
   border: 0;
@@ -433,12 +433,12 @@
   transition: transform 0.2s;
 }
 
-.home .bento button.link-light {
+.home .bento .link-light {
   color: #fff;
 }
 
-.home .bento button.link:hover,
-.home .bento button.link-light:hover {
+.home .bento .link:hover,
+.home .bento .link-light:hover {
   transform: translateX(3px);
 }
 

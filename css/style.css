@@ -44,6 +44,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 1.25rem);
+}
+
 body {
   margin: 0;
   font-family: var(--font);
