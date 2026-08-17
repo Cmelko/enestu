@@ -44,6 +44,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 1.25rem);
+}
+
 body {
   margin: 0;
   font-family: var(--font);
@@ -686,6 +690,13 @@ h1, h2, h3, h4, p {
 
 .nav-backdrop {
   display: none;
+}
+
+@media (max-width: 1180px) {
+  .nav-links a {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.86rem;
+  }
 }
 
 @media (max-width: 960px) {
@@ -2245,5 +2256,146 @@ table.compare tr:last-child td {
   .reveal-delay-2,
   .reveal-delay-3 {
     animation: none;
+  }
+}
+
+/* —— About / O nás —— */
+.about-mission {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 2.5rem 3rem;
+  align-items: start;
+}
+
+.about-quote {
+  margin: 0;
+  padding: 1.75rem 1.6rem;
+  background: var(--yellow);
+  border-radius: var(--radius);
+  align-self: center;
+}
+
+.about-quote p {
+  font-size: 1.2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.about-quote footer {
+  margin-top: 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.about-value-num {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.about-timeline {
+  list-style: none;
+  display: grid;
+  gap: 0;
+  border-left: 2px solid var(--line);
+  margin-left: 0.35rem;
+}
+
+.about-timeline li {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 0 0 1.75rem 1.5rem;
+  position: relative;
+}
+
+.about-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px var(--white);
+}
+
+.about-timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.about-timeline__when {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.about-timeline p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.about-company {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2rem 3rem;
+  align-items: center;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.about-facts > div {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.1rem;
+}
+
+.about-facts span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-facts strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.02rem;
+}
+
+.about-facts a {
+  color: var(--blue);
+}
+
+@media (max-width: 900px) {
+  .about-mission,
+  .about-company {
+    grid-template-columns: 1fr;
+  }
+
+  .about-timeline li {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-facts {
+    grid-template-columns: 1fr;
   }
 }
