@@ -125,11 +125,28 @@
   document.querySelectorAll("form[data-form='waitlist']").forEach((form) => {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      clearErrors(form);
       const fd = new FormData(form);
       const email = String(fd.get("email") || "").trim();
+      const marketingField = form.querySelector("[name=consent_marketing]");
+      const vopField = form.querySelector("[name=consent_vop]");
       const btn = form.querySelector('[type="submit"]');
       const original = btn?.textContent;
-      if (!email) return;
+      let ok = true;
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        const emailInput = form.querySelector("[name=email]");
+        if (emailInput) setFieldError(emailInput, "Zadejte platný e-mail.");
+        ok = false;
+      }
+      if (marketingField && !marketingField.checked) {
+        setFieldError(marketingField, "Je potřeba souhlas s marketingem.");
+        ok = false;
+      }
+      if (vopField && !vopField.checked) {
+        setFieldError(vopField, "Je potřeba souhlas s podmínkami.");
+        ok = false;
+      }
+      if (!ok) return;
       if (btn) {
         btn.disabled = true;
         btn.textContent = "Odesílám…";
@@ -139,6 +156,8 @@
           email,
           source: form.dataset.source || "cta",
           website: fd.get("website") || "",
+          consent: !vopField || vopField.checked,
+          marketing: !marketingField || marketingField.checked,
         });
         if (!res.ok || !json.ok) {
           alert(json.error || "Nepodařilo se odeslat.");

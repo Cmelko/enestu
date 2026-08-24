@@ -37,6 +37,7 @@ export async function onRequestPost(context) {
   const email = clean(body.email, 200).toLowerCase();
   const source = clean(body.source || "website", 80);
   const consent = body.consent !== false;
+  const marketing = body.marketing !== false;
 
   if (!isEmail(email)) {
     return json({ ok: false, error: "Zadejte platný e-mail." }, 400, headers);
@@ -67,7 +68,7 @@ export async function onRequestPost(context) {
     to,
     subject: `[Enestu waitlist] ${email}`,
     html: `<p>Nový zájem o založení domova: <strong>${escapeHtml(email)}</strong></p>
-           <p>Zdroj: ${escapeHtml(source)} · ${consentAt}</p>`,
+           <p>Zdroj: ${escapeHtml(source)} · marketing: ${marketing ? "ano" : "ne"} · ${consentAt}</p>`,
   });
 
   await sendResend(env, {
